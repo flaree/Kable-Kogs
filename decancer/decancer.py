@@ -126,19 +126,7 @@ class Decancer(commands.Cog):
         await channel.send(embed=embed)
 
     async def get_random_nick(self, nickType: int):
-        if nickType == 1:
-            new_nick = random.choice(properNouns)
-        elif nickType == 2:
-            adjective = random.choice(adjectives)
-            noun = random.choice(nouns)
-            new_nick = adjective + noun
-        elif nickType == 3:
-            adjective = random.choice(adjectives)
-            new_nick = adjective.lower()
-        if nickType == 4:
-            nounNicks = nouns, properNouns
-            new_nick = random.choice(random.choices(nounNicks, weights=map(len, nounNicks))[0])
-        return new_nick
+        return "John Doe"
 
     @commands.group()
     @checks.mod_or_permissions(manage_channels=True)
